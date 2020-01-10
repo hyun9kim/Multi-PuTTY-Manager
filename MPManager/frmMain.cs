@@ -1202,6 +1202,28 @@ namespace SessionManagement
 			}
 		}
 
+		// Token: 0x0600004B RID: 75 RVA: 0x00003D90 File Offset: 0x00001F90
+		public void closeAllButActiveSession()
+		{
+			try
+			{
+				frmPutty activePutty = this.dockPanelMain.ActiveDocument as frmPutty;
+
+				foreach (frmPutty putty in this.dockPanelMain.Documents)
+				{
+					if (putty != null && putty != activePutty)
+					{
+						putty.Close();
+					}
+
+				}
+			}
+			catch (Exception ex)
+			{
+			}
+		}
+
+
 		// Token: 0x0600004C RID: 76 RVA: 0x00003E1C File Offset: 0x0000201C
 		private void toolStripMenuDisconnect_Click(object sender, EventArgs e)
 		{
@@ -1598,5 +1620,10 @@ namespace SessionManagement
 
 		// Token: 0x0400000F RID: 15
 		private bool formActivate = true;
+
+		private void toolStripMenuItem1_Click(object sender, EventArgs e)
+		{
+			this.closeAllButActiveSession();
+		}
 	}
 }

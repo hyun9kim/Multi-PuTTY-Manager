@@ -41,7 +41,7 @@
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="WeifenLuo.WinFormsUI.Docking">
-      <HintPath>..\..\..\..\repositories\Tools\MPManager-1.2.1109\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
+      <HintPath>Libs\WeifenLuo.WinFormsUI.Docking.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -120,6 +120,9 @@
   <ItemGroup>
     <EmbeddedResource Include="frmDatabaseProperties.resources" />
     <EmbeddedResource Include="frmHelpAbout.resources" />
+    <None Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </None>
     <EmbeddedResource Include="frmMain.resources" />
     <EmbeddedResource Include="frmMultiCommands.resources" />
     <EmbeddedResource Include="frmOptions.resources" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Drawing;
@@ -1208,18 +1209,23 @@ namespace SessionManagement
 			try
 			{
 				frmPutty activePutty = this.dockPanelMain.ActiveDocument as frmPutty;
+				List<frmPutty> listToClose = new List<frmPutty>();
 
 				foreach (frmPutty putty in this.dockPanelMain.Documents)
 				{
 					if (putty != null && putty != activePutty)
 					{
-						putty.Close();
+						listToClose.Add(putty);
 					}
-
+				}
+				foreach (frmPutty putty in listToClose)
+				{
+					putty.Close();
 				}
 			}
 			catch (Exception ex)
 			{
+				Console.WriteLine(ex.ToString());
 			}
 		}
 

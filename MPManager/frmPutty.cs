@@ -124,7 +124,7 @@ namespace SessionManagement
 			{
 				if (this.session.sessionUserName != "" && this.session.sessionPassword != "")
 				{
-					Thread.Sleep(this.session.passwordTimeout);
+					Thread.Sleep(this.session.connectionTimeout);
 					if (this.session.postLogin)
 					{
 						for (int i = 0; i < this.session.postLoginCommands.Count; i++)

@@ -187,7 +187,7 @@
 			this.numPort.Location = new global::System.Drawing.Point(138, 113);
 			global::System.Windows.Forms.NumericUpDown numericUpDown = this.numPort;
 			int[] array = new int[4];
-			array[0] = 32000;
+			array[0] = 65535;
 			numericUpDown.Maximum = new decimal(array);
 			this.numPort.Name = "numPort";
 			this.numPort.Size = new global::System.Drawing.Size(83, 23);

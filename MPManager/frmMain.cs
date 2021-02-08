@@ -334,7 +334,9 @@ namespace SessionManagement
 							":",
 							sess.sftpPassword,
 							"@",
-							sess.sessionHost
+							sess.sessionHost,
+                            ":",
+                            sess.sessionPort.ToString()
 						}),
 						UseShellExecute = false,
 						CreateNoWindow = true,
